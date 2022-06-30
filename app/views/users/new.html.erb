@@ -1,0 +1,12 @@
+<h1>Registration</h1>
+
+<%= form_for :user, url: '/users', :html => {:class => 'user_form'} do |f| %>
+  <ul>
+    <li>First Name: <%= f.text_field :first_name %></li>
+    <li>Last Name: <%= f.text_field :last_name %></li>
+    <li>Email: <%= f.text_field :email %></li>
+    <li>Password: <%= f.password_field :password %></li>
+    <li>Password Confirmation: <%= f.password_field :password_confirmation %></li>
+    <%= f.submit "Submit", {:class => 'btn btn-primary'} %>
+  </ul>
+<% end %>
